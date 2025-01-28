@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prashanto Dash</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
+            color: #c9d1d9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .card {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), 0 0 20px #00ffcc;
+            padding: 20px;
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+            position: relative;
+        }
+
+        @keyframes rainbow-border {
+            0% { border-color: #ff0000; }
+            16% { border-color: #ffa500; }
+            32% { border-color: #ffff00; }
+            48% { border-color: #008000; }
+            64% { border-color: #0000ff; }
+            80% { border-color: #4b0082; }
+            100% { border-color: #ee82ee; }
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 5px solid transparent;
+            margin: 10px auto;
+            object-fit: cover;
+            animation: rainbow-border 3s infinite;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin: 10px 0;
+            color: #00ffcc;
+            text-shadow: 0 0 10px #00ffcc, 0 0 20px #00cc99;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .social-links img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s, filter 0.3s;
+        }
+
+        /* Make GitHub icon circular */
+        .social-links a[href*="t.me"] img {
+            border-radius: 50%;
+        }
+
+        .social-links img:hover {
+            transform: scale(1.3);
+            filter: brightness(1.2);
+        }
+
+        .skills {
+            margin: 20px auto;
+            padding: 10px;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            background: #161b22;
+            position: relative;
+        }
+
+        .skills h2 {
+            font-size: 1.3rem;
+            color: #00ffcc;
+            margin-bottom: 10px;
+            text-shadow: 0 0 5px #00ffcc, 0 0 10px #00cc99;
+            position: relative;
+        }
+
+        .skills h2::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 8px;
+            border: 2px solid transparent;
+            animation: rainbow-border 3s infinite;
+        }
+
+        .skills ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .skills ul li {
+            padding: 10px;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            background: #161b22;
+            text-align: center;
+            font-size: 1rem;
+            color: #c9d1d9;
+            transition: background 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        .skills ul li::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border-radius: 8px;
+            border: 2px solid transparent;
+            animation: rainbow-border 3s infinite;
+        }
+
+        .developer-name {
+            text-align: center;
+            color: #00ffcc;
+            font-size: 1.2rem;
+            font-weight: bold;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .developer-name::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border-radius: 8px;
+            border: 2px solid transparent;
+            animation: rainbow-border 3s infinite;
+        }
+
+        .developer-name a {
+            color: #00ffcc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .developer-name a:hover {
+            color: #00ccff;
+            text-shadow: 0 0 10px #00ccff;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #8b949e;
+        }
+
+        footer a {
+            color: #00ffcc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #00ccff;
+            text-shadow: 0 0 10px #00ccff;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://i.ytimg.com/vi/f_3zeoFXx_U/hq720_2.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAAlAADIQj0AgKJD8AEB-AHOBYAC0AWKAgwIABABGCkgZChlMA8=&rs=AOn4CLDyvK3OWBoIz9CgUfoD_5WI48fISQ" alt="Profile Picture" class="profile-pic">
+        <h1>𝒫𝓇𝒶𝓈𝒽𝒶𝓃𝓉𝑜 𝒟𝒶𝓈𝒽</h1>
+        
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61552657335738" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+            </a>
+            <a href="t.me/prashanto09" target="_blank">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAeFBMVEX////7/v+13fh2w/I5sO8Qp+1twPKq2Pfw+P2My/QpqeoAourU6/q74Pid0vQoqOno9PwAoeZfue0npeVwverI5PcAn+Tf8PstqeeQy/BBrugAneB+xO0lo+EAmOAkoN1KruR1veYkod4wo9sjoNwAl9eTyutcsuGUqcVdAAABAElEQVR4AazPVWKAMBAE0EWCu0OgaOj9b1gGl98+LMtE6R9IsqIypmq68Y1Mxpi1YMxWXrGD5MBsl25c23qwvds4ZM9UPtfzv+xgD83n/9CHaB+IaheHYZJ6+JHlBHJ4RQVOmYZolwRJvMuilEAPUVUEVQwhr7GH2iEyY+AEPAZdwpniJaNom8dYwyaOE4LyJ8enaRDyNSyapUrcwCl4gNrgDXAJRbK1Fw6Bs4UFgd42u24dKW9hTdc00HIdK7doYxro2+HAO4NGNNqOAEOHU8unFl/h0M4V7YuY6TSL6UH0dCOL9ooe4yD4FeKIOofe8nkUi7F2/oYj7XJwMBKdzgHYOCTeRThq/wAAAABJRU5ErkJggg==" alt="Telegram">
+            </a>
+            <a href="https://wa.me/8801606058870" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            </a>
+        </div>
+        
+        <div class="skills">
+            <h2>𝐒𝐤𝐢𝐥𝐥𝐬</h2>
+            <ul>
+                <li>𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐢𝐧𝐠</li>
+                <li>𝐖𝐞𝐛 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐦𝐞𝐧𝐭</li>
+                <li>𝐓𝐞𝐜𝐡𝐧𝐨𝐥𝐨𝐠𝐲 𝐄𝐱𝐩𝐞𝐫𝐭</li>
+                <li>𝐌𝐚𝐜𝐡𝐢𝐧𝐞 𝐋𝐞𝐚𝐫𝐧𝐢𝐧𝐠</li>
+            </ul>
+        </div>
+        
+        <footer>
+            &copy; 2025 | 𝒞𝓇𝑒𝒶𝓉𝑒𝒹 𝒷𝓎
+            <a href="https://www.facebook.com/profile.php?id=61552103398580" target="_blank">
+                ℬ𝒜𝒟𝒪ℒ 
+            </a>
+        </footer>
+    </div>
+</body>
+</html>
